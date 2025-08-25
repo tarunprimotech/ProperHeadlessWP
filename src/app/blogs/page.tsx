@@ -24,10 +24,17 @@ export default async function BlogPage() {
     fetchPolicy: 'no-cache',
   });
 
+  type PostNode = {
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string;
+  };
+
   return (
     <div className="max-w-4xl mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6">Draft Blog Posts</h1>
-      {data.posts.nodes.map((post) => (
+      {data.posts.nodes.map((post: PostNode) => (
         <div key={post.id} className="mb-4">
           <h2 className="text-xl font-semibold">
             <Link href={`/${post.slug}?preview=true`}>{post.title}</Link>

@@ -3,14 +3,15 @@ import { GET_PAGE_BY_SLUG } from '@/lib/GraphQL/singlePost';
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function Page({ params }: Props) {
+  const { slug } = await params;
   // Fetch the page by slug
   const { data } = await client.query({
     query: GET_PAGE_BY_SLUG,
-    variables: { slug: params.slug },
+    variables: { slug },
   });
 
   const page = data?.page;

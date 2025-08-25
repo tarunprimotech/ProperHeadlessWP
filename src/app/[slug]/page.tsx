@@ -28,9 +28,9 @@ const GET_NODE_BY_URI = gql`
 export default async function SingleNode({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const uri = `/${slug}/`;
 
   const { data } = await client.query({

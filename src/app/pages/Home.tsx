@@ -172,17 +172,17 @@ const Home = () => {
               </p>
               
 
-              <p className="grey-txt fnt-16"        
-                dangerouslySetInnerHTML={{
-                  __html: homepageData?.homepage?.rightImageSection?.description || `<div className="loader"></div>`,
-                }}
-              />
+              {homepageData?.homepage?.rightImageSection?.description ? (
+                <p
+                  className="grey-txt fnt-16"
+                  dangerouslySetInnerHTML={{
+                    __html: homepageData.homepage.rightImageSection.description,
+                  }}
+                />
+              ) : null}
 
               <Link
-                href={
-                  homepageData?.homepage?.rightImageSection?.buttonLink?.url ||
-                  `<div className="loader"></div>`
-                }
+                href={homepageData?.homepage?.rightImageSection?.buttonLink?.url || "#"}
                 className="btn theme-btn white-txt"
               >
                 {/* <a className="btn theme-btn white-txt"> */}

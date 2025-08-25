@@ -1,7 +1,8 @@
 import { gql } from '@apollo/client';
 import client from '@/lib/apolloClient';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { postId } = req.query;
 
   if (!postId) {
@@ -32,6 +33,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ slug: post.slug });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error.message });
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return res.status(500).json({ error: 'Internal server error', details: message });
   }
 }

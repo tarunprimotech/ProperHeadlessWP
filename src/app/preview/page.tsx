@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { gql } from '@apollo/client';
 import client from '@/lib/apolloClient';
 
@@ -15,7 +15,7 @@ const PREVIEW_QUERY = gql`
   }
 `;
 
-export default function PreviewPage() {
+function PreviewContent() {
   const searchParams = useSearchParams();
   const postId = searchParams.get('p');
   const preview = searchParams.get('preview') === 'true';
@@ -24,20 +24,23 @@ export default function PreviewPage() {
 
   useEffect(() => {
     if (postId && preview) {
-      client.query({
-        query: PREVIEW_QUERY,
-        variables: { id: postId },
-        context: {
-          headers: {
-            'X-WP-Nonce': nonce || '', // Send nonce from WordPress
+      client
+        .query({
+          query: PREVIEW_QUERY,
+          variables: { id: postId },
+          context: {
+            headers: {
+              'X-WP-Nonce': nonce || '',
+            },
           },
-        },
-        fetchPolicy: 'no-cache', // So it doesn't cache published only
-      }).then(({ data }) => {
-        setPost(data?.post);
-      }).catch((error) => {
-        console.error('Error loading preview:', error);
-      });
+          fetchPolicy: 'no-cache',
+        })
+        .then(({ data }) => {
+          setPost(data?.post);
+        })
+        .catch((error) => {
+          console.error('Error loading preview:', error);
+        });
     }
   }, [postId, preview, nonce]);
 
@@ -49,6 +52,14 @@ export default function PreviewPage() {
       <p className="text-gray-500">Status: {post.status}</p>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
+  );
+}
+
+export default function PreviewPage() {
+  return (
+    <Suspense fallback={<p>Loading preview…</p>}>
+      <PreviewContent />
+    </Suspense>
   );
 }
 
