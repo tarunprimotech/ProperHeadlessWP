@@ -290,6 +290,119 @@ body a:hover {
   display: none;
 }
 
+/* 08 sept 2025 */
+.space_class {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* 08 sept 2025 */
+
+/* 09 sept 2025 blog inner page css start desktop*/
+.blog-featured-section {
+  position: relative;
+  width: 100%;
+  height: 421px; /* desktop default */
+  margin-bottom: 80px;
+}
+
+.blog-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-featured-img.placeholder {
+  background-color: #1a1a1a;
+}
+
+.blog-featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blog-featured-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 36px; /* desktop default */
+  line-height: 1.2;
+  padding: 0 16px;
+}
+
+/* Grid */
+.explore-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+.explore-post-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;        /* SemiBold */
+  font-style: normal;      /* SemiBold is not a font-style, it's weight */
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #F08705;
+}
+
+/* Explore Latest Image */
+.explore-img,
+.explore-img-placeholder {
+  width: 512px;
+  height: 222px;
+  object-fit: cover;       /* ensures image covers the box */
+  transform: rotate(0deg); /* angle 0 deg */
+  opacity: 1;
+  border-radius: 12px;
+  display: block;
+}
+
+ .explore-read-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 179px;
+  height: 63px;
+  padding: 10px 10px;       /* top/bottom 18px, left/right 24px */
+  gap: 8px;                 /* space between text and icon */
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* #FFFFFF4D */
+  background-color: transparent;  /* or you can add a bg if needed */
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  opacity: 14
+
+}
+
+.explore-read-btn:hover {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Desktop button: show on desktop, hide on mobile/tablet */
+.explore-viewall-btn {
+  display: flex; /* visible by default */
+  margin-left: auto; /* align right in desktop */
+}
+
+/* Mobile/Responsive button: hidden by default, show on mobile/tablet */
+.explore-viewall-btn-alt {
+  display: none; /* hidden on desktop */
+  margin-left: 0; /* default */
+}
+/* 09 sept 2025 blog inner page css end desktop*/
+
+
+
 @media (min-width: 990px) and (max-width: 1200px) {
 
   .ott-platform.only .results-sec .col-lg-3.col-md-6 {
@@ -375,6 +488,21 @@ body a:hover {
     display: block !important;
   }
 }
+/*  09 sept 2025 blog inner page responsive css start max-767*/
+@media screen and (max-width: 767px) {
+  .explore-viewall-btn {
+    display: none; /* hide on mobile/tablet */
+  }
+}
+@media screen and (max-width: 767px) {
+  .explore-viewall-btn-alt {
+    display: flex; /* show on mobile/tablet */
+    justify-content: center; /* center horizontally */
+    margin-top: 40px; /* padding from top */
+  }
+}
+/*  09 sept 2025 blog inner page responsive css end max-767*/
+
 
 @media (min-width: 400px) and (max-width: 767px) {
   ul.logos {
@@ -478,6 +606,7 @@ body a:hover {
 
 
 @media (max-width: 575px) {
+
 
   .ott-platform.only .results-sec h3.heading-txt.yllo-txt {
     margin-top: 50px !important;
@@ -1022,6 +1151,43 @@ footer h6.ftr-heading {
   text-transform: uppercase;
 }
 
+
+
+/* 09 sept 2025 blog inner page responsive css start 640*/
+@media (min-width: 640px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* 09 sept 2025 blog inner page responsive css end 640*/
+
+/* 09 sept 2025 blog inner page responsive css start min 768*/
+@media (min-width: 768px) {
+  .explore-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* 09 sept 2025 blog inner page responsive css end min 768*/
+
+
+
+/* 09 sept 2025 blog inner page responsive css start 768*/
+@media (max-width: 768px) {
+  .blog-featured-section {
+    height: 320px; /* smaller height on tablet/mobile */
+    margin-bottom: 40px;
+    font-family: Poppins;
+  }
+
+  .blog-featured-title {
+    font-size: 24px; /* smaller font */
+    padding: 0 12px;
+  }
+}
+
+/* 09 sept 2025 blog inner page responsive css start */
+
+
 @media (min-width:768px) and (max-width:900px) {
   .container1 {
     font-size: 30px;
@@ -1040,6 +1206,8 @@ footer h6.ftr-heading {
   }
 
 }
+
+
 
 @media (min-width: 300px) and (max-width: 600px) {
   .container1 {
@@ -2780,6 +2948,13 @@ nav.mobile-menu.navbar.navbar-default {
 }
 
 @media (max-width: 767px) {
+
+
+
+
+
+
+
   img.project-overview_image.desk {
     display: none;
   }
@@ -3207,3 +3382,4 @@ ul.icon-menu li {
 div#contact {
   padding-bottom: 0px !important;
 }
+
