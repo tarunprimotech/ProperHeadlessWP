@@ -195,7 +195,7 @@ const totalPages = Math.ceil(all.length / postsPerPage);
       {/* Hero Banner */}
       <section className="relative h-60 md:h-120 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://demo1.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
+          backgroundImage: `url('https://backend.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
@@ -211,7 +211,7 @@ const totalPages = Math.ceil(all.length / postsPerPage);
           {/* Left Column */}
           <div className="flex-1 max-w-[920px]">
             <h2 className="recent-posts-heading inline-block">Recent Posts</h2>
-            <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-2.png"/>
+            <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-2.png"/>
             {/* First Row: 3 posts */}
             <div className="blog-card grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 mt-10">
               {recent.slice(0, 3).map((post: any) => (
@@ -318,7 +318,7 @@ const totalPages = Math.ceil(all.length / postsPerPage);
           <h2 className="trending-news-heading mb-8 pb-2">
             Trending News
           </h2>
-          <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-3.png"/>
+          <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-3.png"/>
 
           {/* First Row: 2 Large Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10">
@@ -426,7 +426,7 @@ const totalPages = Math.ceil(all.length / postsPerPage);
       {/* All Articles */}
       <section className="max-w-[1320px] mx-auto px-6 py-12">
         <h2 className="recent-posts-heading inline-block">All Articles</h2>
-        <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-2.png" />
+        <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-2.png" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
           {paginatedPosts.map((post: any) => (

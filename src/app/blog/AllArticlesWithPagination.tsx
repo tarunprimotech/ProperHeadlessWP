@@ -33,7 +33,7 @@ export default function AllArticlesWithPagination({ posts }: { posts: Post[] }) 
   return (
     <section className="max-w-[1320px] mx-auto py-8">
       <h2 className="recent-posts-heading inline-block">All Articles</h2>
-      <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-2.png" />
+      <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-2.png" />
       
       {/* Articles Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-12">

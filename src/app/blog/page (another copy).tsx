@@ -66,7 +66,7 @@ export default async function BlogLandingPage() {
       <section
         className="relative h-60 md:h-120 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://demo1.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
+          backgroundImage: `url('https://backend.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
         }}
       >
         {/* Dark overlay + Flex container */}

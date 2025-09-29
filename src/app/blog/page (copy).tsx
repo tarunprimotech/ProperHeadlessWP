@@ -65,7 +65,7 @@ export default async function BlogLandingPage() {
       {/* Hero Banner */}
       <section
         className="relative h-80 flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url('https://demo1.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')` }}
+        style={{ backgroundImage: `url('https://backend.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')` }}
       >
         <div className="absolute inset-0 items-center"/>
         <h1 className="relative text-6xl text-center font-bold">Blog</h1>

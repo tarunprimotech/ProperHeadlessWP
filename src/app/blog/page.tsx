@@ -148,7 +148,7 @@ export default async function BlogLandingPage() {
       {/* Hero Banner */}
       <section className="relative h-60 md:h-120 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://demo1.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
+          backgroundImage: `url('https://backend.primotech.ai/wp-content/uploads/2025/09/blog_banner.png')`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
@@ -164,7 +164,7 @@ export default async function BlogLandingPage() {
           {/* Left Column */}
           <div className="flex-1 max-w-[920px]">
             <h2 className="recent-posts-heading inline-block">Recent Posts</h2>
-            <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-2.png"/>
+            <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-2.png"/>
             {/* First Row: 3 posts */}
             <div className="blog-card grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 mt-10">
               {recent.slice(0, 3).map((post: any) => (
@@ -269,7 +269,7 @@ export default async function BlogLandingPage() {
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Heading */}
           <h2 className="trending-news-heading mb-8 pb-2">Trending News</h2>
-          <img src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-3.png" />
+          <img src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-3.png" />
 
           {/* First Row: 2 Large Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10">
@@ -375,7 +375,7 @@ export default async function BlogLandingPage() {
 
       {/* All Articles - and - Popular News */}
       {/* All Articles */}
-      <section className="bg-[#070707] py-6 sm:py-8 md:py-10 lg:py-12 mb-10 sm:mb-14 md:mb-16 lg:mb-20 bg-[url('https://demo1.primotech.ai/wp-content/uploads/2025/09/all-articles-bkg.jpg')] bg-no-repeat bg-right-bottom bg-contain">
+      <section className="bg-[#070707] py-6 sm:py-8 md:py-10 lg:py-12 mb-10 sm:mb-14 md:mb-16 lg:mb-20 bg-[url('https://backend.primotech.ai/wp-content/uploads/2025/09/all-articles-bkg.jpg')] bg-no-repeat bg-right-bottom bg-contain">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Responsive Layout */}
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-[60px] items-start">
@@ -392,7 +392,7 @@ export default async function BlogLandingPage() {
                 Popular News
               </h2>
               <img
-                src="https://demo1.primotech.ai/wp-content/uploads/2025/09/Border-4.png"
+                src="https://backend.primotech.ai/wp-content/uploads/2025/09/Border-4.png"
                 alt="divider"
                 className="lg:mx-0 mb-4 sm:mb-6 lg:mb-8"
               />

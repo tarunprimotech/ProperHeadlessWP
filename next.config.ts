@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "demo1.primotech.ai",
+        hostname: "backend.primotech.ai",
         port: "", // Keep it empty if not using a custom port
         // pathname: "/Staging/PrimotechAi_Backend/wp-content/uploads/**",
         pathname: "/**",
